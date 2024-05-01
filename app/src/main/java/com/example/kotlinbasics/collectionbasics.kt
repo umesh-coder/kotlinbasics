@@ -60,6 +60,59 @@ fun main(){
         println(fruit.name)
         println(fruit.price)
     }
+
+    //print the index of it
+    for (index in fruits.indices){
+        println("${fruits[index].name} is an index $index")
+    }
+
+    //array mix data type
+    val mix = arrayOf("sun","mon","tue","wed",1,2,4.0,5.0,fruits("banana",40.6))
+    println(mix.contentToString())
+
+    //--------------------------------------------------------------------------------------------------------------------------------
+    //List
+
+    val months = listOf("jan","feb","mar")
+    val anytype = listOf(1,2,3,true,false,"hey")
+
+    //to get size of list
+    println("size of list of anytype:- "+anytype.size)
+
+    //acces element by index
+    println(anytype[2])
+
+    //display by loop
+    for (month in months){
+        println(month)
+    }
+
+    //to make list mutable
+    val addmonths = months.toMutableList()
+    val newmonths = arrayOf("apr","may","jun")
+
+    //add array into list
+    addmonths.addAll(newmonths)
+    addmonths.add("jul")
+
+    //display
+    println(addmonths)
+
+    //create mutable list of items
+    val  days = mutableListOf<String>("mon","tue")
+    days.add("wed")
+
+    //remove single element
+//    days.removeAt(1)
+
+    //remove filtered item
+    val filterditem = mutableListOf<String>("tue")
+    days.removeAll(filterditem)
+    println(days)
+
+    //------------------------------------------------------------------------------------------------------------------------------
+    //sets and maps
+    
 }
 
 data class fruits (val name:String , val  price:Double){
