@@ -40,5 +40,28 @@ fun main(){
     }
 
     //one element
-    print(numbers[1])
+    println(numbers[1])
+
+        //double array
+    val dnumbers2 = doubleArrayOf(1.0,4.0,4.2)
+    println(dnumbers2.contentToString())
+
+    //string arra
+    val week = arrayOf("sun","mon","tue","wed","thu","fri","sat","sun")
+    println(week.contentToString())
+
+    //creating obejcts of data class
+    val fruits = arrayOf(fruits("apple",2.2), fruits("banana",40.6))
+
+    println(fruits.contentToString())
+
+    //print only fruit name
+    for (fruit in fruits){
+        println(fruit.name)
+        println(fruit.price)
+    }
+}
+
+data class fruits (val name:String , val  price:Double){
+
 }
