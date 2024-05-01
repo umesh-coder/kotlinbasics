@@ -112,6 +112,62 @@ fun main(){
 
     //------------------------------------------------------------------------------------------------------------------------------
     //sets and maps
+    //create sets
+    val setfruits = setOf("apple","orange","apple","kiwi")
+    println(setfruits.size)
+    println("inital set : - "+setfruits)
+    //output = 3 {remove duplicate values}
+
+    //to get sorted set
+    println("sorted set : - "+setfruits.toSortedSet())
+
+    //to create mutable list
+    val newfruits = setfruits.toMutableList()
+
+    newfruits.add("mango")
+    newfruits.add(("lemon"))
+
+    //acces element at particular position
+    println(newfruits.elementAt(0))
+
+
+
+    //creating set
+    val daysofweek =  mapOf(1 to "mon" , 2 to "tue" , 3 to "wed")
+    println(daysofweek)
+
+    //by using loop
+    for (key in daysofweek.keys){
+
+        println("$key in week ${daysofweek[key]}")
+    }
+
+    //by using data class
+    val fruitsmap = mapOf(1 to fruits("mango",3.4), 2 to fruits("kiwi" , 4.3))
+    println(fruitsmap)
+
+    //key can also be String
+
+    //making mutable
+
+    val newdayofweek = daysofweek.toMutableMap()
+    newdayofweek[4]="fri"
+
+    println(newdayofweek.toSortedMap())
+
+    //-------------------------------------------------------------------------------------------------------------------------
+    //arraylist
+    val elment5 = ArrayList<Double> (5)
+    val addel = listOf(1.0,2.5,4.5,6.5,4.5)
+    elment5.addAll(addel)
+    var temp : Double = 0.0
+    for (add in addel){
+        temp = temp + add
+    }
+
+    println("Average is : ${temp/addel.size}")
+
+    //visibility Modifers
     
 }
 
